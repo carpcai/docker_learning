@@ -1,0 +1,19 @@
+
+services:
+  web1:
+    container_name: myweb1
+    images: "centos:laster"
+    ports:
+     - "8080:80"
+    privileged: true
+    volumes:
+     - "/home/shenyi/nginx/web1/:/var/www/html/"
+  web2:
+    container_name: myweb2
+    images: "centos:laster"
+    ports:
+     - "8081:80"
+    privileged: true
+    volumes:
+     - "/home/shenyi/nginx/web1/:/var/www/html/"
+version: '3'
